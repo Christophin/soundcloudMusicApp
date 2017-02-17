@@ -1,0 +1,41 @@
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body  {
+  text-align: center;
+}
+
+.nav  {
+  padding-bottom: 50px;
+  border-bottom: 2px solid lightgrey;
+}
+
+.container  {
+  text-align: center;
+}
+
+.songBox  {
+  display: inline-block;
+  width: 20%;
+  margin: 2%;
+}
+
+.songBox[title]:hover:after {
+  content: attr(title);
+  position: absolute;
+  z-index: -10;
+  display: none;
+}
+
+.title, .artist  {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.stream {
+  display: none;
+}

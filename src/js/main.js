@@ -1,9 +1,8 @@
 import $ from 'jquery'
-import {searchSoundcloud, scData} from "./soundcloud.js"
-import {songTemplate} from "./template.js"
+import {searchSoundcloud, scData, jewelRunner} from "./soundcloud.js"
+import {songTemplate, playSong, jewelsFast} from "./template.js"
 
-$("form").submit(getSearchResults);
-
+$("#search").submit(getSearchResults);
 
 function getSearchResults (event) {
   event.preventDefault();
@@ -20,5 +19,26 @@ function displayResults (data)  {
   var soundcloudData = scData(data);
   soundcloudData.forEach(function (song)  {
     $(".container").append(songTemplate(song));
+    clickAdder(song);
+  });
+  return soundcloudData;
+};
+
+function clickAdder (song)  {
+  $(`.id${song.id}`).click(function() {
+    $(".audio").empty();
+    $(".audio").append(playSong(song));
   })
-}
+};
+
+$("#runJewels").submit(runTheJewels);
+
+function runTheJewels (event)  {
+  event.preventDefault();
+  searchSoundcloud("run the jewels").then(displayResults).then(jewelRunner).then(jewelPlayer)
+};
+
+function jewelPlayer (url) {
+  $(".audio").empty();
+  $(".audio").append(jewelsFast(url));
+};

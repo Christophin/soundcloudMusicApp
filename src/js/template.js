@@ -1,11 +1,25 @@
+import SC_TOKEN from './token.js'
+
 function songTemplate (song)  {
   return `
-    <div class="songBox">
+    <div class="songBox id${song.id}" title="${song.tooltip}">
       <img src="${song.image}"/>
-      <div class="title">${song.title[1]}</div>
+      <div id="title" class="title">${song.title[1]}</div>
       <div class="artist">${song.title[0]}</div>
     </div>
   `;
 };
 
-export {songTemplate};
+function playSong (song)  {
+  return `
+    <audio src="${song.stream}?client_id=${SC_TOKEN}" controls autoplay></audio>
+  `;
+};
+
+function jewelsFast (url) {
+  return `
+    <audio src="${url}?client_id=${SC_TOKEN}" controls autoplay></audio>
+  `
+}
+
+export {songTemplate, playSong, jewelsFast};
