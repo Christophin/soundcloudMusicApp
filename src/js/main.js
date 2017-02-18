@@ -14,7 +14,7 @@ function showSearchResults () {
   searchSoundcloud(query).then(displayResults);
 };
 
-function displayResults (data)  {
+function displayResults (data) {
   $(".container").empty();
   var soundcloudData = scData(data);
   soundcloudData.forEach(function (song)  {

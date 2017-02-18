@@ -25,6 +25,13 @@ var handleError = function(err) {
   this.emit('end');
 }
 
+gulp.task('assets:images', () => {
+    gulp.src('./src/images/**/*.*')
+      .pipe(sourcemaps.init({loadMaps: true}))
+      .pipe(sourcemaps.write('./'))
+      .pipe(gulp.dest('./app/images'));
+});
+
 // Converts SASS into CSS
 gulp.task('sass', () => {
   gulp.src('./src/sass/main.scss')
@@ -65,6 +72,7 @@ gulp.task('server', function(done) {
 });
 
 // Builds our app
+// for example to build images to static app, add assets:images to tasklist.
 gulp.task('build', ['sass', 'browserify']);
 
 // Starts the development process

@@ -4,8 +4,8 @@ function songTemplate (song)  {
   return `
     <div class="songBox id${song.id}" title="${song.tooltip}">
       <img src="${song.image}"/>
-      <div id="title" class="title">${song.title[1]}</div>
-      <div class="artist">${song.title[0]}</div>
+      <div id="title" class="title">${song.title}</div>
+      <div class="artist">${song.artist}</div>
     </div>
   `;
 };
