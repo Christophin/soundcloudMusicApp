@@ -12,7 +12,7 @@ function searchSoundcloud (query) {
     dataType: "json",
     data: {
       q: query,
-      limit: 50
+      limit: 40
     },
     //success: console.log
   });
@@ -28,7 +28,7 @@ function jewelRunner  (data)  {
 function scData (data)  {
   return data.map(function(object) {
     var albumArt = object.artwork_url === null ? object.user.avatar_url : object.artwork_url;
-    albumArt = albumArt != null ? './images/blank_album.png' : albumArt;
+    albumArt = albumArt === null ? './images/blank-album.png' : albumArt;
     return {
       artist: object.user.username,
       image: albumArt,
