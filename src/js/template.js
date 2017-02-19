@@ -12,6 +12,7 @@ function songTemplate (song)  {
 
 function playSong (song)  {
   return `
+    <div>${song.title}</div>
     <audio src="${song.stream}?client_id=${SC_TOKEN}" controls autoplay></audio>
   `;
 };

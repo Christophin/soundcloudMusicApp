@@ -13,6 +13,10 @@ body  {
   border-bottom: 2px solid lightgrey;
 }
 
+#search-query  {
+  -webkit-appearance: none;
+}
+
 .container  {
   text-align: center;
 }
@@ -43,4 +47,60 @@ img  {
 
 .stream {
   display: none;
+}
+
+#runJewels  {
+  margin-top: 20px;
+}
+
+.btn {
+  background: #000000;
+  background-image: -webkit-linear-gradient(top, #000000, #d60420);
+  background-image: -moz-linear-gradient(top, #000000, #d60420);
+  background-image: -ms-linear-gradient(top, #000000, #d60420);
+  background-image: -o-linear-gradient(top, #000000, #d60420);
+  background-image: linear-gradient(to bottom, #000000, #d60420);
+  -webkit-border-radius: 20;
+  -moz-border-radius: 20;
+  border-radius: 20px;
+  text-shadow: 1px 1px 0px #e6cf3a;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 16px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.sbtn {
+  background: #3498db;
+  background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+  background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+  background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+  background-image: -o-linear-gradient(top, #3498db, #2980b9);
+  background-image: linear-gradient(to bottom, #3498db, #2980b9);
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.sbtn:hover {
+  background: #3cb0fd;
+  background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+  text-decoration: none;
+}
+
+@media only screen and (max-device-width: 480px)  {
+  .songBox  {
+    display: inline-block;
+    width: 40%;
+  }
 }

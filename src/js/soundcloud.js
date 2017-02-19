@@ -22,7 +22,7 @@ function searchSoundcloud (query) {
 //searchSoundcloud("run the jewels");
 
 function jewelRunner  (data)  {
-  return data[Math.floor(Math.random()*data.length)].stream;
+  return  data[Math.floor(Math.random()*data.length)].stream
 }
 
 function scData (data)  {
